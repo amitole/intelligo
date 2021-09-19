@@ -1,0 +1,9 @@
+.amit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textFeild {
+  width: 40;
+}
