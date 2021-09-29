@@ -35,7 +35,7 @@ const Form = ({ selected }) => {
   }, [selected]);
 
   const handleState = (value) => {
-    // debugger;
+
     console.log(`handleState`, value);
     setFormState({ ...formState, ...value });
     console.log(`formState`, formState);
@@ -124,9 +124,9 @@ const Form = ({ selected }) => {
     };
 
     axios
-      .post(`https://clarityapi.intelligo.ai/api/v1/schemas/submit`, {
+      .post(`https://clarityapi.intelligo.ai/api/v1/schemas/submit`, 
         formState,
-      })
+      )
       .then((res) => {
         console.log(res);
         console.log(res.data);
@@ -137,7 +137,7 @@ const Form = ({ selected }) => {
   return (
     <div>
       <div>{rows}</div>
-      <Button variant="success" onclick={handleSubmit}>
+      <Button variant="success" onClick={handleSubmit}>
         Send Form
       </Button>
     </div>
